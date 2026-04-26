@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>PSAR Communication | AI, Software & Government IT Solutions</title>
+  <meta name="description" content="PSAR Communication: Mumbai-based software development company specializing in AI, Data Science, Full Stack development and government e-tender projects. Modern, scalable & secure enterprise solutions.">
+  <meta name="keywords" content="Software Company Mumbai, AI Solutions India, Government Tender IT, Full Stack Development, Data Science Services, GeM Registered">
+  <meta name="author" content="PSAR Communication">
+  
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1A2C3E;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* modern container system */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-marker {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-marker h2 {
+      margin-bottom: 0.5rem;
+    }
+    .section-marker p {
+      color: #5a6e7c;
+      font-size: 1.1rem;
+    }
+
+    /* buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(95deg, #0F2C3D 0%, #1A6F5C 100%);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px rgba(26,111,92,0.25);
+      border: none;
+      font-size: 1rem;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(26,111,92,0.35);
+      background: linear-gradient(95deg, #1a3f4f, #208b72);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 2px solid #1A6F5C;
+      color: #1A6F5C;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-outline:hover {
+      background: #1A6F5C;
+      color: white;
+    }
+
+    /* Header & navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+      z-index: 100;
+      padding: 18px 0;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0F2C3D, #1A6F5C);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+    .logo span {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #5c6f7e;
+      display: block;
+      letter-spacing: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1F3B4C;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #1A6F5C;
+    }
+    /* hero section */
+    .hero {
+      background: linear-gradient(105deg, #F9FCFE 0%, #ECF9F5 100%);
+      padding: 80px 0 90px;
+    }
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .hero-content {
+      flex: 1.2;
+    }
+    .hero-content .badge {
+      background: rgba(26,111,92,0.12);
+      padding: 6px 16px;
+      border-radius: 40px;
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1A6F5C;
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #0F2C3D;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #3e5a6b;
+      margin-bottom: 2rem;
+      max-width: 90%;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-number {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #1A6F5C;
+    }
+    .hero-visual {
+      flex: 0.9;
+      text-align: center;
+    }
+    .hero-visual i {
+      font-size: 11rem;
+      color: rgba(26,111,92,0.2);
+    }
+
+    /* services cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .service-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.12);
+      border-color: #e2f0ec;
+    }
+    .service-icon {
+      font-size: 2.4rem;
+      color: #1A6F5C;
+      margin-bottom: 1.5rem;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .service-card p {
+      color: #466071;
+    }
+
+    /* about + why choose combined elegance */
+    .about-wrap {
+      background: #FCFEFD;
+    }
+    .two-columns {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .about-text {
+      flex: 1.3;
+    }
+    .why-list {
+      flex: 1;
+      background: white;
+      padding: 2rem;
+      border-radius: 28px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    }
+    .why-list ul {
+      list-style: none;
+    }
+    .why-list li {
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
+    .why-list i {
+      color: #1A6F5C;
+      font-size: 1.2rem;
+      width: 28px;
+    }
+
+    /* tech grid */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .tech-item {
+      background: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 60px;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      border: 1px solid #e2edf0;
+    }
+
+    /* contact section */
+    .contact-grid {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      background: #F8FCFB;
+      border-radius: 36px;
+      padding: 2.5rem;
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-form {
+      flex: 1.2;
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    .contact-detail i {
+      width: 40px;
+      height: 40px;
+      background: rgba(26,111,92,0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+      color: #1A6F5C;
+      font-size: 1.2rem;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #cfdfe4;
+      border-radius: 18px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #1A6F5C;
+      box-shadow: 0 0 0 3px rgba(26,111,92,0.2);
+    }
+    button[type="submit"] {
+      background: #0F2C3D;
+      border: none;
+      width: 100%;
+      padding: 14px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button[type="submit"]:hover {
+      background: #1A6F5C;
+    }
+
+    footer {
+      background: #0F2C3D;
+      color: #CDE5E0;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .footer-copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #2c4b5a;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 24px;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero-stats {
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: 600px) {
+      .btn-primary, .btn-outline {
+        padding: 10px 20px;
+      }
+      .section-marker h2 {
+        font-size: 1.8rem;
+      }
+    }
+    .section {
+      padding: 70px 0;
+    }
+    .bg-soft {
+      background: #F9FEFC;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrapper">
+    <div class="logo">
+  <img src="logo.png" alt="PSAR Communication Logo" style="height: 50px; width: auto;">
+  <span>Software | AI | Government Solutions</span>
+</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge"><i class="fas fa-crown"></i> Trusted IT Partner for Govt & Enterprise</div>
+        <h1>Intelligent software, <br>future-ready impact.</h1>
+        <p>PSAR Communication delivers AI-driven solutions, full-stack engineering, and government project execution — modernizing digital ecosystems across India.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a project</a>
+          <a href="#services" class="btn-outline" style="margin-left: 1rem;"><i class="fas fa-chart-line"></i> Explore services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><span class="stat-number">8+</span><span>Years of excellence</span></div>
+          <div class="stat-item"><span class="stat-number">75+</span><span>Projects delivered</span></div>
+          <div class="stat-item"><span class="stat-number">30+</span><span>Govt. tenders won</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <i class="fas fa-microchip"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-marker">
+        <h2>Core Competencies</h2>
+        <p>Cutting-edge technology services for modern challenges</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Full Stack Development</h3>
+          <p>React, Node.js, Python, Java – scalable web platforms, API-first architecture, cloud-native apps.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI & Data Science</h3>
+          <p>Predictive analytics, computer vision, NLP models & intelligent automation for data-driven decisions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Application Development</h3>
+          <p>Cross-platform mobile & desktop apps (Flutter, .NET) tailor-made for enterprise workflows.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-landmark"></i></div>
+          <h3>Government Projects</h3>
+          <p>End-to-end IT solutions for public sector, GeM registration, e-tender expertise & compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About + Why Choose Us -->
+  <section id="about" class="section bg-soft">
+    <div class="container">
+      <div class="section-marker">
+        <h2>About PSAR Communication</h2>
+        <p>Innovation meets integrity — powering digital transformation in Maharashtra & beyond</p>
+      </div>
+      <div class="two-columns">
+        <div class="about-text">
+          <p style="font-size:1.05rem; margin-bottom:1.2rem;">Based in Mumbai & Jaipur , PSAR Communication is a <strong>software development & digital solutions powerhouse</strong> specializing in government collaborations, AI-led systems, and enterprise-grade platforms. We actively participate in government tenders, delivering solutions that are secure, scalable, and aligned with public sector frameworks.</p>
+          <p>Our team of seasoned engineers, data scientists, and full-stack developers bring deep expertise in modern tech stacks; we pride ourselves on transparent execution, on-time delivery, and impactful outcomes for both private and public clients.</p>
+          <div class="tech-stack">
+            <span class="tech-item">Python</span>
+            <span class="tech-item">React.js</span>
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">TensorFlow</span>
+            <span class="tech-item">Django</span>
+            <span class="tech-item">AWS/Azure</span>
+          </div>
+        </div>
+        <div class="why-list">
+          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-star-of-life"></i> Why choose us?</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <strong>Government Project Experts</strong> – Proven track record in tender-based IT implementations.</li>
+            <li><i class="fas fa-shield-alt"></i> <strong>Security & Compliance</strong> – ISO-aligned, data protection, and audit-ready systems.</li>
+            <li><i class="fas fa-chart-simple"></i> <strong>Agile & Scalable</strong> – Delivery using modern DevOps, CI/CD, and cloud infrastructure.</li>
+            <li><i class="fas fa-headset"></i> <strong>Dedicated Support</strong> – 24/7 maintenance & strategic consulting.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Government & Tender expertise highlight -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div style="background: linear-gradient(112deg, #eef7f3, #ffffff); border-radius: 32px; padding: 2rem 2rem; text-align: center;">
+        <i class="fas fa-file-signature" style="font-size: 2.8rem; color: #1A6F5C; margin-bottom: 1rem; display: inline-block;"></i>
+        <h3 style="font-size: 1.6rem;">Government Tender & GeM Expertise</h3>
+        <p style="max-width: 750px; margin: 1rem auto;">Registered with Government e-Marketplace (GeM) and empanelled for various state and central digital initiatives. We handle complete RFP-to-delivery lifecycle, ensuring transparency and excellence.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1.5rem;">
+          <span style="background: #e9f3f0; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-check-circle"></i> GeM Registered</span>
+          <span style="background: #e9f3f0; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-tasks"></i> Tender Specialists</span>
+          <span style="background: #e9f3f0; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-building"></i> State Govt. Projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-marker">
+        <h2>Let's Connect</h2>
+        <p>Reach out to discuss your next project or tender collaboration</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><strong>Visit us</strong><br>23/24, Sitla Devi Temple Rd, D.N.Nagar, Andheri West, Mumbai, Maharashtra 400053 || Plot No 265, Narayan Vihar, K Block, Arjun Tower, Ajmer Road, Jaipur, Rajasthan 302020</div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <div><strong>Call us</strong><br><a href="tel:+918949738298" style="text-decoration:none; color:#1F3B4C;">+91 89497 38298</a></div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div><strong>Email</strong><br><a href="mailto:info@psarcommunication.online" style="text-decoration:none; color:#1F3B4C;">info@psarcommunication.online</a></div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <i class="fab fa-linkedin" style="font-size: 1.6rem; margin-right: 1rem; color:#1A6F5C;"></i>
+            <i class="fab fa-twitter" style="font-size: 1.6rem; margin-right: 1rem; color:#1A6F5C;"></i>
+            <i class="fab fa-github" style="font-size: 1.6rem; color:#1A6F5C;"></i>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3 style="margin-bottom: 1.2rem;">Send a message</h3>
+          <form id="demoForm">
+            <div class="form-group">
+              <input type="text" placeholder="Full name" id="name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email address" id="email" required>
+            </div>
+            <div class="form-group">
+              <textarea rows="3" placeholder="Project / Tender details" id="message" required></textarea>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send inquiry</button>
+          </form>
+          <p style="font-size: 0.75rem; margin-top: 1rem; text-align: center;">We'll get back within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <h3 style="color:white; margin-bottom:0.5rem;">PSAR Communication</h3>
+        <p>Delivering next-gen IT & government solutions with precision.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong><br>
+        <a href="#home" style="color:#CDE5E0; text-decoration:none;">Home</a><br>
+        <a href="#services" style="color:#CDE5E0; text-decoration:none;">Services</a><br>
+        <a href="#about" style="color:#CDE5E0; text-decoration:none;">About</a>
+      </div>
+      <div>
+        <strong>Work with us</strong><br>
+        <span>partners@psarcommunication.com</span>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2025 PSAR Communication | All Rights Reserved | Leading IT & Software Company Mumbai</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // smooth scroll & contact form demo submission
+  document.querySelectorAll('.nav-links a, .btn-primary, .btn-outline').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const hash = this.getAttribute('href');
+      if (hash && hash.startsWith('#') && hash !== '#') {
+        e.preventDefault();
+        const targetId = hash.substring(1);
+        const targetElem = document.getElementById(targetId);
+        if (targetElem) {
+          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // form handling elegant alert
+  const form = document.getElementById('demoForm');
+  if(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(name && email && msg) {
+        alert(`✨ Thank you ${name}! Your message has been received. Our team will reach out shortly.`);
+        form.reset();
+      } else {
+        alert('Please fill all fields to get in touch with PSAR Communication.');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+```
